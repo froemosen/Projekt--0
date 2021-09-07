@@ -1,9 +1,11 @@
 #include <Arduino.h>
 
 void setup() {
-  // put your setup code here, to run once:
+  pinMode(2, INPUT);  // sets the digital pin 13 as output1
+  Serial.begin(9600);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  Serial.print(digitalRead(2));
+  delay(50);
 }
